@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-lectors_departments-table
+      author: university
+      changes:
+        - createTable:
+            tableName: lectors_departments
+            columns:
+              - column:
+                  name: lector_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: lector_id
+                    referencedTableName: lectors
+                    referencedColumnNames: id
+              - column:
+                  name: department_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: department_id
+                    referencedTableName: departments
+                    referencedColumnNames: id

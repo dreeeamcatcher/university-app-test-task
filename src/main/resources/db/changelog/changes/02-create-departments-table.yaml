@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-departments-table
+      author: university
+      changes:
+        - createTable:
+            tableName: departments
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: head_of_department_lector_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: head_of_dep_lector_id
+                    referencedTableName: lectors
+                    referencedColumnNames: id
