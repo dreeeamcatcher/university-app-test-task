@@ -36,7 +36,7 @@ public class ConsoleApplication implements CommandLineRunner {
     private String generateInitialString() {
         String departments = departmentService.getDepartmentNames().toString();
         StringBuilder builder = new StringBuilder();
-        builder.append("Hello! With this application you can perform following commands:")
+        builder.append("Hello! This application allows you to perform the following commands:")
                 .append(System.lineSeparator())
                 .append("1 - Find the head of department. ")
                 .append("Command to use: 'Who is head of department {department_name}'")
@@ -57,7 +57,6 @@ public class ConsoleApplication implements CommandLineRunner {
                 .append("Now we have the following departments: ")
                 .append(departments)
                 .append(System.lineSeparator());
-        ;
         return builder.toString();
     }
 }
