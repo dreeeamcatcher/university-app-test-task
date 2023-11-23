@@ -10,7 +10,7 @@ public class InvalidCommandImpl implements CommandHandler {
     private static final Pattern PATTERN = Pattern.compile(REGEX_PATTERN);
 
     @Override
-    public void parseCommand(String command) {
+    public void processCommand(String command) {
         System.out.println("Invalid command. Please, check the command templates and try again. "
                 + "For exit type 'exit'");
     }

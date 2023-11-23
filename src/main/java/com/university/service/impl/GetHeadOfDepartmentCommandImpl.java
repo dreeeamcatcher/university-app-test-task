@@ -17,7 +17,7 @@ public class GetHeadOfDepartmentCommandImpl implements CommandHandler {
     private final DepartmentService departmentService;
 
     @Override
-    public void parseCommand(String command) throws EntityNotFoundException {
+    public void processCommand(String command) throws EntityNotFoundException {
         Matcher matcher = PATTERN.matcher(command);
         matcher.find();
         String departmentName = matcher.group(1);

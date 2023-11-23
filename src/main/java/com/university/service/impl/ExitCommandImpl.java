@@ -12,7 +12,7 @@ public class ExitCommandImpl implements CommandHandler {
     private static final Pattern PATTERN = Pattern.compile(REGEX_PATTERN);
 
     @Override
-    public void parseCommand(String command) {
+    public void processCommand(String command) {
         System.out.println("Exiting application.");
         System.exit(0);
     }

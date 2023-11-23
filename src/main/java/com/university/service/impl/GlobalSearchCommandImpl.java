@@ -15,7 +15,7 @@ public class GlobalSearchCommandImpl implements CommandHandler {
     private final LectorService lectorService;
 
     @Override
-    public void parseCommand(String command) {
+    public void processCommand(String command) {
         Matcher matcher = PATTERN.matcher(command);
         matcher.find();
         String searchValue = matcher.group(1);

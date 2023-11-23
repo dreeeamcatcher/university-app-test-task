@@ -26,7 +26,7 @@ public class ConsoleApplication implements CommandLineRunner {
             String command = scanner.nextLine();
             CommandHandler commandHandler = commandStrategy.getCommandHandler(command);
             try {
-                commandHandler.parseCommand(command);
+                commandHandler.processCommand(command);
             } catch (EntityNotFoundException e) {
                 System.out.println(e.getMessage());
             }
